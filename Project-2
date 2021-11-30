@@ -1,0 +1,64 @@
+**28 November 2021**<br>
+**MPAD2003A: Introductory Data Storytelling**<br>
+**Mateja Blazhevski**<br>
+**Presented to Jean-Sébastien Marier**<br>
+<br>
+
+# Project 2: Basic Data Analysis & Visualization
+
+
+
+## 1. Introduction
+
+The goal for this assignment was to create a visualization of a story idea with the help of data. To create the visualization, we were given a dataset called “Construction, demolition, and pool enclosure permits monthly – 2020”. The dataset was created by the City of Ottawa, and it includes several different columns, with thousands of rows full of information. However, for this assignment, I only ended up needing two of the several columns for my final product; these columns concerned the wards of Ottawa and their municipalities. My goal was to check and see which Ward had the most municipalities, and how much construction, demolition, and pool enclosure permits they had respectively. The dataset can be found here: https://open.ottawa.ca/documents/ottawa::construction-demolition-and-pool-enclosure-permits-monthly-2020/about.
+## 2. Getting Data
+
+To begin my project, I first had to insert the data into a google spreadsheet. Out of the two options, I chose to download it from the GitHub repository, which took me some time due to my vague understanding of the application. Nonetheless, I managed to download the file onto my desktop, after which I headed straight to google sheets. Here, I attempted to import the data using the `IMPORTDATA` function, though the file was too big, so I imported the data manually. 
+Below is the dataset now imported into a spreadsheet. As previously stated, the dataset is very big, with around twelve thousand rows of information (12549 to be precise). What’s more, each column uses different values, and there are 16 individual columns. Examples of some very differing columns are column A which displays postal code, column E which displays the plan, and column J which gives us a brief description of the work done.
+	
+This specific dataset was created by a private member working for the government of Canada, as we can see on the webpage where the original dataset is given to us. The dataset was first published on 11th of February 2020, though has since been updated, with the most recent update being on the 13th of February 2021.  Overall, the dataset appears to be well maintained, though there are some slight issues concerning spelling and general formatting.
+
+![](ImportedData.png)<br>
+*Figure 1: What the .csv initially looked like before editing*
+
+## 3. Understanding Data
+
+The next step was to clean and refine the data. This was probably the more difficult, or at least the more tedious part in the whole project. To begin with, I was having difficulties with openRefine, though I eventually managed to get it going. However, I did not accomplish much on openRefine, and I only managed to clear out some whitespace and remove rows which were entirely blank. This did not change much, given that there were only two blank rows and another twelve thousand plus rows left unchecked. At that point, I decided to turn to the data-cleaning tools on Google Sheets. It was there where I completed most of the data cleaning. 
+To clean up the data in Google Sheets, I used the spell check tool for the most part. I was able to find what seemed like an endless number of mistakes thanks to the tool, though there were also some things that were fine as they were so one still must be careful when using it. 
+I made the decision to freeze the first line, to keep it visible while scrolling through the data. Applying filters also sounded like a good idea at first, and I did so on the column dedicated to the Wards in an attempt to order them numerically. I later undid this step because of minor complications.
+As advised, I made sure to change the formatting of a few of the columns for better accuracy. I started by adding a currency format to the value, and I later applied formats for the date too.
+At this point, I felt like I was ready to start thinking of what a good idea for a story would be. At first, I was aiming for a comparison between the municipalities and values. This would have shown us the difference in pricing among the neighbourhoods in Ottawa. To do so, I attempted displaying this comparison in a pivot table. Unfortunately, this method did not work since the value did not display as it should have displayed no matter what I did. Instead, I ended up making a comparison between the municipalities and their respective Wards. I thought it would be interesting to see which Ward was appointed to the larger area depending on how many cases of construction, demolition and pool enclosure permits there was in each Ward. It was a simple task, and it thankfully worked in a pivot table as expected. 
+
+![](PivotTableOriginal.png)<br>
+*Figure 2: The result of my pivot table*
+
+
+## 4. Delivering Data
+
+Afterwards, it was time to import the data into datawrapper. Unfortunately, datawraper would crash every time I would try to import the data, regardless of whether I’m importing the whole dataset or just a pivot table. My best guess is that the dataset was still too big to be imported, though I still have no clue as to why this was being an issue. In the end, I took the data from the pivot table, and created an entirely new sheet, where one column was dedicated to wards, and a second one was dedicated to the number of municipalities in which they were involved. Once I imported my self-made dataset with the information from the original dataset, I could start working on the visualization. 
+I chose “stacked bars” as the chart that I would use for the visualization, since it was nice and simple, and got straight to the point. Apart from that, it was the only one that made sense to use.
+Next up, I chose a turquoise-like green colour, attempting to match the one of the two main colours of the City of Ottawa. I added the “Separating Lines” feature as well, to make the chart more appealing.
+Finally, I gave the chart a simple title, added all necessary information in the form of sources, description, and alternative description. 
+
+
+
+
+![](OriginalProject.png)<br>
+*Figure 3: The chart created with Datawrapper.*<br>
+[Online version here](https://datawrapper.dwcdn.net/1dvZq/2/ )
+
+## 5. Conclusion
+
+I believe I may say that I am satisfied with the outcome of the visualization of the dataset, even though I’m not too sure about my progress in the other steps. I also believe that what I did end up finding concerning Wards and their municipalities would make for somewhat of a decent story.
+However, with the help of various tools and programs, one may turn a raw, error-ridden dataset into a visualization with a story for everyone to understand. Although it may take time and patience to go through most of the spelling mistakes, blank spaces, and empty rows, you can always speed the process up using the tools and formulas which are given to you for that very reason.
+
+
+## 6. References
+<br>
+
+Cairo, A. (2016, February 8). The Truthful Art: Data, Charts, and Maps for 
+ Communicatoion. New Riders.<br>
+ <br>
+ 
+ Construction, demolition, and pool enclosure permits monthly - 2020. (2020, February 11). City of Ottawa.
+ https://open.ottawa.ca/documents/ottawa::construction-demolition-and-pool-enclosure-permits-monthly-2020/about
